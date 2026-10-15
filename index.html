@@ -1,1 +1,396 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atharv Bhosale | Data Engineer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: #e2e8f0;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 8%;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #7dd3fc;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #38bdf8;
+        }
+
+        .about {
+            max-width: 850px;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 10px 16px;
+            border-radius: 20px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .project h3 {
+            color: #f8fafc;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+            margin-bottom: 18px;
+        }
+
+        .tech {
+            color: #38bdf8;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .certifications li {
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Atharv Bhosale</h2>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h1>Hi, I'm <span>Atharv Bhosale</span></h1>
+
+        <h2>Aspiring Data Engineer</h2>
+
+        <p>
+            BSc-IT graduate passionate about building cloud-based data pipelines,
+            ETL workflows and scalable data solutions using Microsoft Azure,
+            Microsoft Fabric, SQL, Python and PySpark.
+        </p>
+
+        <div>
+            <a href="#projects" class="btn">View Projects</a>
+
+            <!-- Replace this with your actual LinkedIn -->
+            <a href="YOUR_LINKEDIN_URL" class="btn">LinkedIn</a>
+
+            <!-- Replace this with your GitHub URL -->
+            <a href="YOUR_GITHUB_URL" class="btn">GitHub</a>
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p class="about">
+            I am a BSc-IT graduate seeking a Data Engineering internship or
+            entry-level Data Engineering role. I am interested in designing
+            data pipelines, transforming data and building cloud-based data
+            platforms.
+
+            <br><br>
+
+            My technical experience includes SQL, Python, PySpark, Azure Data
+            Factory, Azure Data Lake Storage Gen2, Azure Synapse Analytics and
+            Microsoft Fabric.
+
+            <br><br>
+
+            I enjoy working with data engineering concepts such as ETL,
+            medallion architecture, incremental loading, data transformation
+            and cloud data platforms.
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">SQL</div>
+            <div class="skill">Python</div>
+            <div class="skill">PySpark</div>
+
+            <div class="skill">Azure Data Factory</div>
+            <div class="skill">Azure Data Lake Storage Gen2</div>
+            <div class="skill">Azure Synapse Analytics</div>
+
+            <div class="skill">Microsoft Fabric</div>
+            <div class="skill">Databricks</div>
+
+            <div class="skill">ETL / ELT</div>
+            <div class="skill">Medallion Architecture</div>
+            <div class="skill">Data Pipelines</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>Projects</h2>
+
+        <div class="projects">
+
+
+            <!-- Project 1 -->
+            <div class="project">
+
+                <h3>Retail Medallion Data Pipeline</h3>
+
+                <p>
+                    Built a cloud-based retail data engineering pipeline using
+                    Azure Data Factory, ADLS Gen2 and Azure Synapse Analytics.
+                    Implemented Bronze, Silver and Gold layers and transformed
+                    retail transaction data using PySpark.
+                </p>
+
+                <div class="tech">
+                    Azure Data Factory · ADLS Gen2 · Synapse Analytics · PySpark · SQL
+                </div>
+
+                <!-- Replace with your Notion project link -->
+                <a href="YOUR_RETAIL_NOTION_LINK" class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project">
+
+                <h3>AdventureWorks Metadata-Driven Pipeline</h3>
+
+                <p>
+                    Developed a metadata-driven ETL pipeline that extracts data
+                    from SQL Server and loads it into Azure Data Lake Storage.
+                    Implemented full and incremental loading using metadata and
+                    watermark-based processing.
+                </p>
+
+                <div class="tech">
+                    SQL Server · Azure Data Factory · ADLS Gen2 · Synapse · SQL
+                </div>
+
+                <!-- Replace with your Notion project link -->
+                <a href="YOUR_ADVENTUREWORKS_NOTION_LINK" class="btn">
+                    View Project
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Certifications -->
+    <section id="certifications">
+
+        <h2>Certifications & Learning</h2>
+
+        <ul class="certifications">
+
+            <li>Data Engineering Course – Udemy</li>
+
+            <li>Cloud Data Engineering Course – IIT Kanpur</li>
+
+            <li>Microsoft Azure Data Engineering & Microsoft Fabric Learning</li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact</h2>
+
+        <p class="about">
+            I'm currently looking for Data Engineering internship and
+            entry-level opportunities.
+        </p>
+
+        <br>
+
+        <!-- Replace these with your actual links -->
+
+        <a href="YOUR_LINKEDIN_URL" class="btn">
+            LinkedIn
+        </a>
+
+        <a href="YOUR_GITHUB_URL" class="btn">
+            GitHub
+        </a>
+
+        <a href="mailto:YOUR_EMAIL@example.com" class="btn">
+            Email Me
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        © 2026 Atharv Bhosale · Data Engineering Portfolio
+
+    </footer>
+
+</body>
+</html>
