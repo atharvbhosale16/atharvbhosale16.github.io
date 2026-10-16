@@ -1,708 +1,210 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <!-- Mobile Responsive -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Atharv Bhosale - Aspiring Data Engineer specializing in Azure, Microsoft Fabric, SQL, Python and PySpark.">
-
-    <title>Atharv Bhosale | Aspiring Data Engineer</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Atharv Bhosale - Cloud & Data Engineer specializing in Microsoft Azure, ETL pipelines, and Big Data analytics." />
+  <title>Atharv Bhosale | Portfolio</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<!-- ================= NAVBAR ================= -->
+  <!-- Navigation -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">&lt;<span>Atharv</span> /&gt;</a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="mailto:atharvbhosale16@gmail.com" class="btn btn-outline nav-cta">Let's Talk</a>
+    </div>
+  </header>
 
-<header class="header">
-
-    <nav class="navbar container">
-
-        <a href="#home" class="logo">
-            Atharv<span>.</span>
-        </a>
-
-        <button class="menu-toggle"
-                id="menu-toggle"
-                aria-label="Open navigation menu">
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-        </button>
-
-        <ul class="nav-links" id="nav-links">
-
-            <li>
-                <a href="#about">About</a>
-            </li>
-
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-
-            <li>
-                <a href="#certifications">Certifications</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
-<!-- ================= HERO ================= -->
-
-<main>
-
-<section class="hero" id="home">
-
-    <div class="container hero-content">
-
-        <p class="hello">
-            HELLO, I'M
-        </p>
-
-        <h1>
-            Atharv
-            <span>Bhosale</span>
-        </h1>
-
-        <h2>
-            Aspiring Data Engineer
-        </h2>
-
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-content">
+        <p class="tagline">Hi, my name is</p>
+        <h1 class="hero-title">Atharv Bhosale.</h1>
+        <h2 class="hero-subtitle">Building scalable Cloud & Data pipelines.</h2>
         <p class="hero-description">
-
-            BSc-IT graduate passionate about building cloud-based
-            data pipelines, ETL workflows and scalable data solutions
-            using Microsoft Azure, Microsoft Fabric, SQL, Python and PySpark.
-
+          I am a Data & Cloud Engineer focused on designing reliable data pipelines, 
+          cloud infrastructure, and analytics workflows with Microsoft Azure, SQL, and Python.
         </p>
-
-        <div class="hero-buttons">
-
-            <a href="#projects" class="btn btn-primary">
-                View Projects
-            </a>
-
-            <a href="https://www.linkedin.com/in/atharvbhosale16"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn btn-secondary">
-
-                LinkedIn
-
-            </a>
-
-            <a href="https://github.com/atharvbhosale16"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn btn-secondary">
-
-                GitHub
-
-            </a>
-
+        
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Featured Projects</a>
+          <a href="https://www.linkedin.com/in/atharvbhosale16" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn Profile</a>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section class="section" id="about">
-
-    <div class="container">
-
-        <p class="section-label">
-            GET TO KNOW ME
-        </p>
-
-        <h2 class="section-title">
-            About Me
-        </h2>
-
-        <div class="about-card">
-
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
             <p>
-
-                I'm a BSc-IT graduate focused on starting my career in
-                Data Engineering. I enjoy working with data, designing
-                ETL pipelines and building cloud-based data solutions.
-
+              I specialize in turning raw enterprise data into clean, accessible, and structured analytics platforms. 
+              My work revolves around architecting end-to-end data workflows, ETL/ELT pipelines, and modern cloud lakehouse architectures.
             </p>
-
             <p>
-
-                My current focus is Azure Data Engineering and Microsoft
-                Fabric. I have hands-on experience with services such as
-                Azure Data Factory, Azure Data Lake Storage, Azure Synapse
-                Analytics, Microsoft Fabric, SQL, Python and PySpark.
-
+              With strong hands-on experience in the <strong>Microsoft Azure ecosystem</strong> (Data Factory, Synapse, Databricks, Data Lake), 
+              I focus on scalability, data integrity, and cost-effective cloud operations.
             </p>
-
-            <p>
-
-                I'm looking for Data Engineering internship and fresher
-                opportunities where I can apply my skills to real-world
-                data problems and continue learning.
-
-            </p>
-
+          </div>
+          <div class="quick-facts">
+            <div class="fact-card">
+              <span class="fact-label">Primary Cloud</span>
+              <span class="fact-val">Microsoft Azure</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-label">Focus Area</span>
+              <span class="fact-val">Data Engineering & Analytics</span>
+            </div>
+            <div class="fact-card">
+              <span class="fact-label">Location</span>
+              <span class="fact-val">India</span>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section class="section alternate-section" id="skills">
-
-    <div class="container">
-
-        <p class="section-label">
-            WHAT I WORK WITH
-        </p>
-
-        <h2 class="section-title">
-            Technical Skills
-        </h2>
-
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-heading">Technical Stack</h2>
         <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Cloud & Storage</h3>
+            <ul>
+              <li>Azure Data Factory (ADF)</li>
+              <li>Azure Data Lake Gen2</li>
+              <li>Azure Synapse Analytics</li>
+              <li>Azure SQL Database</li>
+              <li>Blob Storage</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Processing & Big Data</h3>
+            <ul>
+              <li>Apache Spark / PySpark</li>
+              <li>Azure Databricks</li>
+              <li>Delta Lake / Medallion</li>
+              <li>ETL / ELT Pipelines</li>
+              <li>Data Modeling</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Languages & Tools</h3>
+            <ul>
+              <li>SQL (Complex queries, procedures)</li>
+              <li>Python (Pandas, PySpark)</li>
+              <li>Git & GitHub</li>
+              <li>Power BI / Reporting</li>
+              <li>CI/CD Basics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- Azure -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ☁
-                </div>
-
-                <h3>
-                    Azure
-                </h3>
-
-                <p>
-                    Azure Data Factory<br>
-                    Azure Data Lake Storage<br>
-                    Azure Synapse Analytics
-                </p>
-
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-heading">Featured Projects</h2>
+        
+        <div class="projects-list">
+          
+          <!-- Project 1: UrbanMart -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="badge">Featured Project</span>
+              <h3 class="project-title">UrbanMart: Azure Retail Data Engineering</h3>
             </div>
-
-
-            <!-- Microsoft Fabric -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    F
-                </div>
-
-                <h3>
-                    Microsoft Fabric
-                </h3>
-
-                <p>
-                    Lakehouse<br>
-                    Warehouse<br>
-                    Pipelines & Notebooks
-                </p>
-
+            <p class="project-desc">
+              An enterprise retail data pipeline designed to ingest, cleanse, and transform large-scale point-of-sale and e-commerce records. Utilizes a Medallion architecture (Bronze, Silver, Gold) on Azure to deliver query-ready data for commercial analytics and dashboards.
+            </p>
+            <div class="tech-tags">
+              <span>Azure Data Factory</span>
+              <span>Azure Databricks</span>
+              <span>ADLS Gen2</span>
+              <span>PySpark</span>
+              <span>Synapse Analytics</span>
             </div>
-
-
-            <!-- Programming -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    &lt;/&gt;
-                </div>
-
-                <h3>
-                    Programming
-                </h3>
-
-                <p>
-                    Python<br>
-                    PySpark<br>
-                    SQL
-                </p>
-
+            <div class="project-links">
+              <a href="https://app.notion.com/p/UrbanMart-Azure-Retail-Data-Engineering-Project-3f8d4be6b38280f5ace9c23e31a8e4d6?source=copy_link" target="_blank" rel="noopener noreferrer" class="link-btn">
+                Read Project Documentation &rarr;
+              </a>
             </div>
+          </article>
 
-
-            <!-- Data Engineering -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    DB
-                </div>
-
-                <h3>
-                    Data Engineering
-                </h3>
-
-                <p>
-                    ETL / ELT<br>
-                    Medallion Architecture<br>
-                    Data Transformation
-                </p>
-
+          <!-- Project 2: Adventure Works Azure Project -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="badge">Cloud Pipeline</span>
+              <h3 class="project-title">AdventureWorks: Cloud Data Warehouse Pipeline</h3>
             </div>
-
-
-            <!-- Databases -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    SQL
-                </div>
-
-                <h3>
-                    Databases
-                </h3>
-
-                <p>
-                    Microsoft SQL Server<br>
-                    SQL Queries<br>
-                    Data Warehousing
-                </p>
-
+            <p class="project-desc">
+              End-to-end cloud pipeline implementation using the AdventureWorks dataset. Integrates source data ingestion via ADF, scheduled batch transformations, star schema modeling, and reporting-ready views in Azure Synapse and SQL.
+            </p>
+            <div class="tech-tags">
+              <span>Microsoft Azure</span>
+              <span>ETL Pipelines</span>
+              <span>SQL Data Warehouse</span>
+              <span>Data Modeling</span>
+              <span>Power BI</span>
             </div>
-
-
-            <!-- Big Data -->
-
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    Big Data
-                </h3>
-
-                <p>
-                    Apache Spark<br>
-                    PySpark DataFrames<br>
-                    Basic Databricks
-                </p>
-
+            <div class="project-links">
+              <a href="https://app.notion.com/p/AZURE-PROJECT-3abd4be6b3828038b494cd2f38097096?source=copy_link" target="_blank" rel="noopener noreferrer" class="link-btn">
+                Read Project Documentation &rarr;
+              </a>
             </div>
+          </article>
 
         </div>
+      </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-<!-- ================= PROJECTS ================= -->
-
-<section class="section" id="projects">
-
-    <div class="container">
-
-        <p class="section-label">
-            MY WORK
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container text-center">
+        <h2 class="section-heading centered">Get In Touch</h2>
+        <p class="contact-desc">
+          I am always open to exploring new engineering opportunities, collaborations, or data projects. 
+          Feel free to reach out directly!
         </p>
-
-        <h2 class="section-title">
-            Projects
-        </h2>
-
-        <div class="projects-grid">
-
-
-            <!-- ================= PROJECT 1 ================= -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        01
-                    </span>
-
-                    <span class="project-type">
-                        Azure Data Engineering
-                    </span>
-
-                </div>
-
-                <h3>
-                    UrbanMart — Azure Retail Data Engineering Project
-                </h3>
-
-                <p>
-
-                    Built an end-to-end retail data engineering solution
-                    using Azure Data Lake Storage, Azure Synapse Analytics
-                    and PySpark.
-
-                </p>
-
-                <p>
-
-                    Implemented Bronze, Silver and Gold layers to clean,
-                    transform and prepare retail data for analytics.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>Azure</span>
-                    <span>Synapse</span>
-                    <span>PySpark</span>
-                    <span>ADLS Gen2</span>
-                    <span>SQL</span>
-
-                </div>
-
-                <a href="https://app.notion.com/p/UrbanMart-Azure-Retail-Data-Engineering-Project-3f8d4be6b38280f5ace9c23e31a8e4d6?source=copy_link"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn btn-primary project-button">
-
-                    View Project →
-
-                </a>
-
-            </article>
-
-
-            <!-- ================= PROJECT 2 ================= -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        02
-                    </span>
-
-                    <span class="project-type">
-                        ETL Pipeline
-                    </span>
-
-                </div>
-
-                <h3>
-                    AdventureWorks2022 Metadata-Driven Pipeline
-                </h3>
-
-                <p>
-
-                    Developed a metadata-driven ETL pipeline for
-                    AdventureWorks2022 data using Azure Data Factory,
-                    Azure Data Lake Storage and Azure Synapse Analytics.
-
-                </p>
-
-                <p>
-
-                    Implemented full and incremental loading using
-                    metadata tables and watermark-based processing.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>ADF</span>
-                    <span>Azure</span>
-                    <span>ADLS</span>
-                    <span>Synapse</span>
-                    <span>SQL</span>
-
-                </div>
-
-                <a href="https://app.notion.com/p/AZURE-PROJECT-3abd4be6b3828038b494cd2f38097096?source=copy_link"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn btn-primary project-button">
-
-                    View Project →
-
-                </a>
-
-            </article>
-
-
-            <!-- ================= PROJECT 3 ================= -->
-
-            <article class="project-card">
-
-                <div class="project-top">
-
-                    <span class="project-number">
-                        03
-                    </span>
-
-                    <span class="project-type">
-                        Microsoft Fabric
-                    </span>
-
-                </div>
-
-                <h3>
-                    Microsoft Fabric Data Pipeline
-                </h3>
-
-                <p>
-
-                    Built a data engineering workflow using Microsoft
-                    Fabric components including Lakehouse, Data Pipelines,
-                    Notebooks and Warehouse.
-
-                </p>
-
-                <p>
-
-                    Explored data ingestion, transformation and analytics
-                    workflows using Microsoft Fabric services.
-
-                </p>
-
-                <div class="tags">
-
-                    <span>Fabric</span>
-                    <span>Lakehouse</span>
-                    <span>PySpark</span>
-                    <span>Pipeline</span>
-
-                </div>
-
-            </article>
-
+        <div class="contact-methods">
+          <a href="mailto:atharvbhosale16@gmail.com" class="btn btn-primary">Send Email</a>
+          <a href="https://www.linkedin.com/in/atharvbhosale16" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Connect on LinkedIn</a>
         </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Atharv Bhosale. Hosted with GitHub Pages.</p>
+      <div class="footer-links">
+        <a href="https://github.com/atharvbhosale16" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/atharvbhosale16" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:atharvbhosale16@gmail.com">Email</a>
+      </div>
     </div>
-
-</section>
-
-
-<!-- ================= CERTIFICATIONS ================= -->
-
-<section class="section alternate-section" id="certifications">
-
-    <div class="container">
-
-        <p class="section-label">
-            LEARNING & CERTIFICATIONS
-        </p>
-
-        <h2 class="section-title">
-            Certifications
-        </h2>
-
-        <div class="cert-grid">
-
-
-            <!-- IIT Kanpur -->
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    ✓
-                </div>
-
-                <div>
-
-                    <h3>
-                        Cloud Data Engineering
-                    </h3>
-
-                    <p>
-                        IIT Kanpur
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Udemy -->
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    ✓
-                </div>
-
-                <div>
-
-                    <h3>
-                        Data Engineering
-                    </h3>
-
-                    <p>
-                        Udemy
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- Microsoft Fabric -->
-
-            <div class="cert-card">
-
-                <div class="cert-icon">
-                    ✓
-                </div>
-
-                <div>
-
-                    <h3>
-                        Microsoft Fabric
-                    </h3>
-
-                    <p>
-                        Data Engineering Learning
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="section contact-section" id="contact">
-
-    <div class="container contact-content">
-
-        <p class="section-label">
-            LET'S CONNECT
-        </p>
-
-        <h2 class="section-title">
-            Contact Me
-        </h2>
-
-        <p>
-
-            I'm currently looking for Data Engineering internship
-            and fresher opportunities.
-
-        </p>
-
-        <div class="contact-buttons">
-
-            <a href="mailto:atharvbhosale16@gmail.com"
-               class="btn btn-primary">
-
-                Email Me
-
-            </a>
-
-
-            <a href="https://www.linkedin.com/in/atharvbhosale16"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn btn-secondary">
-
-                LinkedIn
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-</main>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="container">
-
-        <p>
-            © 2026 Atharv Bhosale
-        </p>
-
-        <p class="footer-subtitle">
-            Aspiring Data Engineer
-        </p>
-
-    </div>
-
-</footer>
-
-
-<!-- ================= MOBILE MENU ================= -->
-
-<script>
-
-    const menuToggle = document.getElementById("menu-toggle");
-
-    const navLinks = document.getElementById("nav-links");
-
-
-    menuToggle.addEventListener("click", () => {
-
-        navLinks.classList.toggle("active");
-
-        menuToggle.classList.toggle("active");
-
-    });
-
-
-    /* Close mobile menu after clicking a link */
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("active");
-
-            menuToggle.classList.remove("active");
-
-        });
-
-    });
-
-</script>
-
+  </footer>
 
 </body>
-
 </html>
-```
