@@ -1,396 +1,588 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+
+    <!-- IMPORTANT FOR MOBILE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Atharv Bhosale - Aspiring Data Engineer specializing in Azure, Microsoft Fabric, SQL, Python and PySpark.">
 
     <title>Atharv Bhosale | Data Engineer</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        nav {
-            position: sticky;
-            top: 0;
-            background: #0f172a;
-            border-bottom: 1px solid #334155;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        nav h2 {
-            color: #38bdf8;
-        }
-
-        nav a {
-            color: #e2e8f0;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
-            color: #38bdf8;
-        }
-
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 80px 8%;
-        }
-
-        .hero h1 {
-            font-size: 56px;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
-        }
-
-        .hero h2 {
-            font-size: 28px;
-            color: #94a3b8;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            max-width: 700px;
-            color: #cbd5e1;
-            font-size: 18px;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 22px;
-            background: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            margin-right: 10px;
-        }
-
-        .btn:hover {
-            background: #7dd3fc;
-        }
-
-        section {
-            padding: 80px 8%;
-        }
-
-        section h2 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #38bdf8;
-        }
-
-        .about {
-            max-width: 850px;
-            font-size: 18px;
-            color: #cbd5e1;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .skill {
-            background: #1e293b;
-            border: 1px solid #334155;
-            padding: 10px 16px;
-            border-radius: 20px;
-        }
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .project {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #334155;
-        }
-
-        .project h3 {
-            color: #f8fafc;
-            margin-bottom: 12px;
-            font-size: 22px;
-        }
-
-        .project p {
-            color: #cbd5e1;
-            margin-bottom: 18px;
-        }
-
-        .tech {
-            color: #38bdf8;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .certifications li {
-            margin-bottom: 12px;
-            color: #cbd5e1;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
-        }
-
-        @media (max-width: 700px) {
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            nav {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            nav a {
-                margin-left: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <h2>Atharv Bhosale</h2>
+<!-- ================= NAVBAR ================= -->
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<header class="header">
 
+    <nav class="navbar container">
 
-    <!-- Hero Section -->
-    <section class="hero">
+        <a href="#home" class="logo">
+            Atharv<span>.</span>
+        </a>
 
-        <h1>Hi, I'm <span>Atharv Bhosale</span></h1>
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu">
 
-        <h2>Aspiring Data Engineer</h2>
+            <span></span>
+            <span></span>
+            <span></span>
 
-        <p>
-            BSc-IT graduate passionate about building cloud-based data pipelines,
-            ETL workflows and scalable data solutions using Microsoft Azure,
-            Microsoft Fabric, SQL, Python and PySpark.
-        </p>
+        </button>
 
-        <div>
-            <a href="#projects" class="btn">View Projects</a>
+        <ul class="nav-links" id="nav-links">
 
-            <!-- Replace this with your actual LinkedIn -->
-            <a href="https://www.linkedin.com/in/atharvbhosale16" class="btn">LinkedIn</a>
+            <li><a href="#about">About</a></li>
 
-            <!-- Replace this with your GitHub URL -->
-            <a href="https://github.com/atharvbhosale16" class="btn">GitHub</a>
-        </div>
+            <li><a href="#skills">Skills</a></li>
 
-    </section>
+            <li><a href="#projects">Projects</a></li>
 
+            <li><a href="#certifications">Certifications</a></li>
 
-    <!-- About -->
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <p class="about">
-            I am a BSc-IT graduate seeking a Data Engineering internship or
-            entry-level Data Engineering role. I am interested in designing
-            data pipelines, transforming data and building cloud-based data
-            platforms.
-
-            <br><br>
-
-            My technical experience includes SQL, Python, PySpark, Azure Data
-            Factory, Azure Data Lake Storage Gen2, Azure Synapse Analytics and
-            Microsoft Fabric.
-
-            <br><br>
-
-            I enjoy working with data engineering concepts such as ETL,
-            medallion architecture, incremental loading, data transformation
-            and cloud data platforms.
-        </p>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2>Technical Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill">SQL</div>
-            <div class="skill">Python</div>
-            <div class="skill">PySpark</div>
-
-            <div class="skill">Azure Data Factory</div>
-            <div class="skill">Azure Data Lake Storage Gen2</div>
-            <div class="skill">Azure Synapse Analytics</div>
-
-            <div class="skill">Microsoft Fabric</div>
-            <div class="skill">Databricks</div>
-
-            <div class="skill">ETL / ELT</div>
-            <div class="skill">Medallion Architecture</div>
-            <div class="skill">Data Pipelines</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects">
-
-        <h2>Projects</h2>
-
-        <div class="projects">
-
-
-            <!-- Project 1 -->
-            <div class="project">
-
-                <h3>Retail Medallion Data Pipeline</h3>
-
-                <p>
-                    Built a cloud-based retail data engineering pipeline using
-                    Azure Data Factory, ADLS Gen2 and Azure Synapse Analytics.
-                    Implemented Bronze, Silver and Gold layers and transformed
-                    retail transaction data using PySpark.
-                </p>
-
-                <div class="tech">
-                    Azure Data Factory · ADLS Gen2 · Synapse Analytics · PySpark · SQL
-                </div>
-
-                <!-- Replace with your Notion project link -->
-                <a href="https://app.notion.com/p/UrbanMart-Azure-Retail-Data-Engineering-Project-3f8d4be6b38280f5ace9c23e31a8e4d6?source=copy_link" class="btn">
-                    View Project
-                </a>
-
-            </div>
-
-
-            <!-- Project 2 -->
-            <div class="project">
-
-                <h3>AdventureWorks Metadata-Driven Pipeline</h3>
-
-                <p>
-                    Developed a metadata-driven ETL pipeline that extracts data
-                    from SQL Server and loads it into Azure Data Lake Storage.
-                    Implemented full and incremental loading using metadata and
-                    watermark-based processing.
-                </p>
-
-                <div class="tech">
-                    SQL Server · Azure Data Factory · ADLS Gen2 · Synapse · SQL
-                </div>
-
-                <!-- Replace with your Notion project link -->
-                <a href="https://app.notion.com/p/AZURE-PROJECT-3abd4be6b3828038b494cd2f38097096?source=copy_link" class="btn">
-                    View Project
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- Certifications -->
-    <section id="certifications">
-
-        <h2>Certifications & Learning</h2>
-
-        <ul class="certifications">
-
-            <li>Data Engineering Course – Udemy</li>
-
-            <li>Cloud Data Engineering Course – IIT Kanpur</li>
-
-            <li>Microsoft Azure Data Engineering & Microsoft Fabric Learning</li>
+            <li><a href="#contact">Contact</a></li>
 
         </ul>
 
-    </section>
+    </nav>
+
+</header>
 
 
-    <!-- Contact -->
-    <section id="contact">
+<!-- ================= HERO ================= -->
 
-        <h2>Contact</h2>
+<main>
 
-        <p class="about">
-            I'm currently looking for Data Engineering internship and
-            entry-level opportunities.
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <p class="hello">HELLO, I'M</p>
+
+        <h1>
+            Atharv
+            <span>Bhosale</span>
+        </h1>
+
+        <h2>Aspiring Data Engineer</h2>
+
+        <p class="hero-description">
+
+            BSc-IT graduate passionate about building cloud-based
+            data pipelines, ETL workflows and scalable data solutions
+            using Microsoft Azure, Microsoft Fabric, SQL, Python and PySpark.
+
         </p>
 
-        <br>
+        <div class="hero-buttons">
 
-        <!-- Replace these with your actual links -->
+            <a href="#projects" class="btn btn-primary">
+                View Projects
+            </a>
 
-        <a href="YOUR_LINKEDIN_URL" class="btn">
-            LinkedIn
-        </a>
+            <a href="https://www.linkedin.com/in/atharvbhosale16"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary">
 
-        <a href="YOUR_GITHUB_URL" class="btn">
-            GitHub
-        </a>
+                LinkedIn
 
-        <a href="mailto:atharvbhosale16@gmail.com" class="btn">
-            Email Me
-        </a>
+            </a>
 
-    </section>
+            <!-- Replace with your actual GitHub profile if different -->
+            <a href="https://github.com/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary">
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 
-    <!-- Footer -->
-    <footer>
+<!-- ================= ABOUT ================= -->
 
-        © 2026 Atharv Bhosale · Data Engineering Portfolio
+<section class="section" id="about">
 
-    </footer>
+    <div class="container">
+
+        <p class="section-label">GET TO KNOW ME</p>
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-card">
+
+            <p>
+
+                I'm a BSc-IT graduate focused on starting my career in
+                Data Engineering. I enjoy working with data, designing
+                ETL pipelines and building cloud-based data solutions.
+
+            </p>
+
+            <p>
+
+                My current focus is Azure Data Engineering and Microsoft
+                Fabric. I have hands-on experience with services such as
+                Azure Data Factory, Azure Data Lake Storage, Azure Synapse
+                Analytics, Microsoft Fabric, SQL, Python and PySpark.
+
+            </p>
+
+            <p>
+
+                I'm looking for Data Engineering internship and fresher
+                opportunities where I can apply my skills to real-world
+                data problems and continue learning.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section alternate-section" id="skills">
+
+    <div class="container">
+
+        <p class="section-label">WHAT I WORK WITH</p>
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+
+                <div class="skill-icon">☁</div>
+
+                <h3>Azure</h3>
+
+                <p>
+                    Azure Data Factory<br>
+                    Azure Data Lake Storage<br>
+                    Azure Synapse Analytics
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">F</div>
+
+                <h3>Microsoft Fabric</h3>
+
+                <p>
+                    Lakehouse<br>
+                    Warehouse<br>
+                    Pipelines & Notebooks
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">&lt;/&gt;</div>
+
+                <h3>Programming</h3>
+
+                <p>
+                    Python<br>
+                    PySpark<br>
+                    SQL
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">DB</div>
+
+                <h3>Data Engineering</h3>
+
+                <p>
+                    ETL / ELT<br>
+                    Medallion Architecture<br>
+                    Data Transformation
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">SQL</div>
+
+                <h3>Databases</h3>
+
+                <p>
+                    Microsoft SQL Server<br>
+                    SQL Queries<br>
+                    Data Warehousing
+                </p>
+
+            </div>
+
+
+            <div class="skill-card">
+
+                <div class="skill-icon">⚡</div>
+
+                <h3>Big Data</h3>
+
+                <p>
+                    Apache Spark<br>
+                    PySpark DataFrames<br>
+                    Basic Databricks
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section" id="projects">
+
+    <div class="container">
+
+        <p class="section-label">MY WORK</p>
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">01</span>
+
+                    <span class="project-type">
+                        Azure Data Engineering
+                    </span>
+
+                </div>
+
+                <h3>
+                    Retail Data Engineering Pipeline
+                </h3>
+
+                <p>
+
+                    Built an end-to-end retail data engineering solution
+                    using Azure Data Lake Storage, Azure Synapse Analytics
+                    and PySpark.
+
+                </p>
+
+                <p>
+
+                    Implemented Bronze, Silver and Gold layers to clean,
+                    transform and prepare retail data for analytics.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Azure</span>
+                    <span>Synapse</span>
+                    <span>PySpark</span>
+                    <span>ADLS Gen2</span>
+                    <span>SQL</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">02</span>
+
+                    <span class="project-type">
+                        ETL Pipeline
+                    </span>
+
+                </div>
+
+                <h3>
+                    AdventureWorks Metadata-Driven Pipeline
+                </h3>
+
+                <p>
+
+                    Developed a metadata-driven ETL pipeline for
+                    AdventureWorks data using Azure Data Factory,
+                    Azure Data Lake Storage and Azure Synapse Analytics.
+
+                </p>
+
+                <p>
+
+                    Implemented full and incremental loading using
+                    metadata tables and watermark-based processing.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>ADF</span>
+                    <span>Azure</span>
+                    <span>ADLS</span>
+                    <span>Synapse</span>
+                    <span>SQL</span>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project-card">
+
+                <div class="project-top">
+
+                    <span class="project-number">03</span>
+
+                    <span class="project-type">
+                        Microsoft Fabric
+                    </span>
+
+                </div>
+
+                <h3>
+                    Microsoft Fabric Data Pipeline
+                </h3>
+
+                <p>
+
+                    Built a data engineering workflow using Microsoft
+                    Fabric components including Lakehouse, Data Pipelines,
+                    Notebooks and Warehouse.
+
+                </p>
+
+                <div class="tags">
+
+                    <span>Fabric</span>
+                    <span>Lakehouse</span>
+                    <span>PySpark</span>
+                    <span>Pipeline</span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATIONS ================= -->
+
+<section class="section alternate-section" id="certifications">
+
+    <div class="container">
+
+        <p class="section-label">LEARNING & CERTIFICATIONS</p>
+
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-card">
+
+                <div class="cert-icon">✓</div>
+
+                <div>
+
+                    <h3>
+                        Cloud Data Engineering
+                    </h3>
+
+                    <p>
+                        IIT Kanpur
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <div class="cert-icon">✓</div>
+
+                <div>
+
+                    <h3>
+                        Data Engineering
+                    </h3>
+
+                    <p>
+                        Udemy
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <div class="cert-icon">✓</div>
+
+                <div>
+
+                    <h3>
+                        Microsoft Fabric
+                    </h3>
+
+                    <p>
+                        Data Engineering Learning
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container contact-content">
+
+        <p class="section-label">LET'S CONNECT</p>
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+
+        <p>
+
+            I'm currently looking for Data Engineering internship
+            and fresher opportunities.
+
+        </p>
+
+        <div class="contact-buttons">
+
+            <a href="mailto:YOUR-EMAIL@gmail.com"
+               class="btn btn-primary">
+
+                Email Me
+
+            </a>
+
+            <a href="https://www.linkedin.com/in/atharvbhosale16"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn btn-secondary">
+
+                LinkedIn
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Atharv Bhosale
+        </p>
+
+        <p class="footer-subtitle">
+            Aspiring Data Engineer
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<script>
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+
+        navLinks.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+
+    });
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+            menuToggle.classList.remove("active");
+
+        });
+
+    });
+
+</script>
 
 </body>
 </html>
