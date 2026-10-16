@@ -11,8 +11,458 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ==========================================================================
+       CSS Variables & Reset
+       ========================================================================== */
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-surface: #111827;
+      --bg-surface-elevated: #1f2937;
+      --border-color: #374151;
+      --accent-color: #38bdf8;
+      --accent-hover: #0ea5e9;
+      --accent-glow: rgba(56, 189, 248, 0.15);
+      
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-dim: #6b7280;
+
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --container-width: 1040px;
+      --transition-fast: 0.2s ease;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout & Headings */
+    .container {
+      width: 90%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-heading {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 40px;
+      height: 3px;
+      background-color: var(--accent-color);
+      border-radius: 2px;
+    }
+
+    .section-heading.centered::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    /* Navigation */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: rgba(11, 15, 25, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 1.1rem 0;
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .logo span {
+      color: var(--accent-color);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.4rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .btn-primary {
+      background-color: var(--accent-color);
+      color: #0b0f19;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      box-shadow: 0 0 15px var(--accent-glow);
+    }
+
+    .btn-secondary {
+      background-color: var(--bg-surface-elevated);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-secondary:hover {
+      background-color: #2b3749;
+      border-color: var(--text-muted);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      background-color: var(--accent-glow);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      padding: 7rem 0 5rem 0;
+    }
+
+    .tagline {
+      font-family: var(--font-mono);
+      color: var(--accent-color);
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title {
+      font-size: 3.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #ffffff;
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      max-width: 620px;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .quick-facts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .fact-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fact-label {
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .fact-val {
+      font-weight: 600;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+
+    .skill-category h3 {
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+      color: var(--accent-color);
+      font-family: var(--font-mono);
+    }
+
+    .skill-category ul {
+      list-style: none;
+    }
+
+    .skill-category li {
+      color: var(--text-muted);
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .skill-category li::before {
+      content: '▹';
+      color: var(--accent-color);
+      margin-right: 0.6rem;
+      font-size: 0.9rem;
+    }
+
+    /* Projects Section */
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .project-card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 2rem;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-color);
+    }
+
+    .project-header {
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background-color: rgba(56, 189, 248, 0.1);
+      color: var(--accent-color);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .project-title {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tech-tags span {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      background-color: var(--bg-surface-elevated);
+      color: #cbd5e1;
+      padding: 0.3rem 0.65rem;
+      border-radius: 4px;
+    }
+
+    .link-btn {
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: transform var(--transition-fast);
+    }
+
+    .link-btn:hover {
+      text-decoration: underline;
+      transform: translateX(3px);
+    }
+
+    /* Contact & Footer */
+    .contact-section {
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+
+    .contact-desc {
+      max-width: 540px;
+      margin: 0 auto 2rem auto;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    .contact-methods {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      padding: 2.5rem 0;
+      background-color: var(--bg-primary);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.4rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.6rem;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
