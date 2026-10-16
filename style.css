@@ -1,3 +1,4 @@
+```css
 /* =========================================
    ATHARV BHOSALE PORTFOLIO
    Responsive Desktop + Mobile
@@ -210,7 +211,7 @@ ul {
 }
 
 
-/* subtle background glow */
+/* Background glow */
 
 .hero::before {
 
@@ -306,7 +307,9 @@ ul {
 }
 
 
-/* ---------- BUTTONS ---------- */
+/* =========================================
+   BUTTONS
+   ========================================= */
 
 .hero-buttons,
 .contact-buttons {
@@ -341,6 +344,8 @@ ul {
         transform 0.25s ease,
         background 0.25s ease,
         border 0.25s ease;
+
+    cursor: pointer;
 }
 
 
@@ -641,6 +646,8 @@ ul {
 }
 
 
+/* ---------- PROJECT TAGS ---------- */
+
 .tags {
 
     display: flex;
@@ -668,6 +675,18 @@ ul {
     font-size: 12px;
 
     font-weight: 600;
+}
+
+
+/* ---------- PROJECT BUTTON ---------- */
+
+.project-button {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    min-width: 150px;
 }
 
 
@@ -813,12 +832,14 @@ footer {
 @media (max-width: 900px) {
 
     .skills-grid {
+
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
 
 
     .cert-grid {
+
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
     }
@@ -973,6 +994,8 @@ footer {
     }
 
 
+    /* ---------- HERO BUTTONS ---------- */
+
     .hero-buttons {
 
         display: grid;
@@ -1076,6 +1099,14 @@ footer {
     }
 
 
+    .project-button {
+
+        width: 100%;
+
+        margin-top: 15px;
+    }
+
+
     /* ---------- CERTIFICATES ---------- */
 
     .cert-grid {
@@ -1150,3 +1181,4 @@ footer {
     }
 
 }
+```
