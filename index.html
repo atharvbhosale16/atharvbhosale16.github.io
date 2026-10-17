@@ -108,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      position: relative; /* Added for mobile menu positioning */
+      position: relative;
     }
 
     .logo {
@@ -138,6 +138,12 @@
 
     .nav-links a:hover {
       color: var(--accent-color);
+    }
+    
+    .nav-actions {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
     }
 
     /* Hamburger Button (Hidden on Desktop) */
@@ -461,7 +467,6 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      /* Show Hamburger, Configure Mobile Menu */
       .hamburger-btn {
         display: block;
       }
@@ -478,12 +483,16 @@
         gap: 1.5rem;
         border-bottom: 1px solid var(--border-color);
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-        display: none; /* Hidden by default on mobile */
+        display: none;
       }
       
-      /* Class triggered by JS to show the menu */
       .nav-links.active {
         display: flex;
+      }
+      
+      /* Show Resume link inside the mobile menu */
+      .nav-links .mobile-resume {
+        display: block;
       }
 
       .hero-title {
@@ -494,7 +503,7 @@
         font-size: 1.6rem;
       }
 
-      .nav-cta {
+      .nav-actions {
         display: none;
       }
 
@@ -505,6 +514,13 @@
       .footer-content {
         flex-direction: column;
         text-align: center;
+      }
+    }
+    
+    /* Hide the mobile resume link on desktop */
+    @media (min-width: 769px) {
+      .nav-links .mobile-resume {
+        display: none;
       }
     }
   </style>
@@ -521,9 +537,13 @@
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="Atharv_Bhosale_Resume.pdf" target="_blank" class="mobile-resume">Resume</a>
       </nav>
       
-      <a href="mailto:atharvbhosale16@gmail.com" class="btn btn-outline nav-cta">Let's Talk</a>
+      <div class="nav-actions">
+        <a href="Atharv_Bhosale_Resume.pdf" target="_blank" class="btn btn-outline">Resume</a>
+        <a href="mailto:atharvbhosale16@gmail.com" class="btn btn-primary">Let's Talk</a>
+      </div>
       
       <!-- Hamburger Icon -->
       <button class="hamburger-btn" id="hamburger" aria-label="Toggle Navigation">
@@ -548,6 +568,7 @@
         
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Featured Projects</a>
+          <a href="Atharv_Bhosale_Resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
           <a href="https://www.linkedin.com/in/atharvbhosale16" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">LinkedIn Profile</a>
         </div>
       </div>
@@ -692,6 +713,7 @@
         </p>
         <div class="contact-methods">
           <a href="mailto:atharvbhosale16@gmail.com" class="btn btn-primary">Send Email</a>
+          <a href="Atharv_Bhosale_Resume.pdf" target="_blank" class="btn btn-outline">View Resume</a>
           <a href="https://www.linkedin.com/in/atharvbhosale16" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Connect on LinkedIn</a>
         </div>
       </div>
